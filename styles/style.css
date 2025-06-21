@@ -1,28 +1,230 @@
-@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
 
-nav{
-    background-color: rgb(31, 28, 28);
-    font-family: 'Pokemon Solid', sans-serif;
+/* Navbar */
+nav {
+  background-color: rgb(31, 28, 28);
+  font-family: "Pokemon Solid", sans-serif;
 }
 
-.nav-buttons a{
-    color: aliceblue;
-    margin: 15px;
+.nav-buttons a {
+  color: aliceblue;
+  margin: 10px;
+  font-size: 1rem;
 }
 
-.logo_img img{
-    width: 5rem;
-    transition: 450ms;
+@media (max-width: 768px) {
+  .nav-buttons a {
+    margin: 8px;
+    font-size: 0.9rem;
+  }
 }
 
-.logo_img img:hover{
-    transform: scale(1.15);
+@media (max-width: 480px) {
+  .nav-buttons a {
+    margin: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+.logo_img img {
+  width: 5rem;
+  transition: 450ms;
+}
+
+.logo_img img:hover {
+  transform: scale(1.15);
 }
 
 .white-toggle .navbar-toggler-icon {
-    filter: invert(1);
+  filter: invert(1);
 }
-.navbar-toggler{
-    border: 1px solid white;
-    border-radius: 0.5rem;
+.navbar-toggler {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+
+/* -Página Home- */
+
+/* Carrusel */
+#titulo {
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: 40px;
+  color: rgb(255, 234, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  #titulo {
+    font-size: 30px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #titulo {
+    font-size: 24px;
+    padding: 6px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #titulo {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
+.carousel-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 992px) {
+  .carousel-item img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100px;
+  height: 100px;
+  background-size: 100% 100%;
+  filter: brightness(0%);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Secciones */
+
+[id*="fondo1"] {
+  background-color: rgb(31, 28, 28);
+  color: white;
+  padding: 20px;
+}
+
+#texto_home {
+  font-size: 2vw;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  #texto_home {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #texto_home {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #texto_home {
+    font-size: 4.5vw;
+  }
+}
+
+[id*="imagen_seccion_home"] {
+  width: 50vw;
+  max-width: 400px;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 20px auto;
+}
+
+@media (max-width: 992px) {
+  [id*="imagen_seccion_home"] {
+    width: 60vw;
+    max-width: 300px;
+    max-height: 250px;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  [id*="imagen_seccion_home"] {
+    width: 70vw;
+    max-width: 250px;
+    max-height: 200px;
+    display: block;
+  }
+}
+
+.iconify-section-home {
+  display: none;
+  font-size: 100px;
+  color: rgb(153, 153, 151);
+  margin: 20px auto;
+}
+
+@media (max-width: 480px) {
+  [id*="imagen_seccion_home"] {
+    display: none;
+  }
+
+  .iconify-section-home {
+    display: block;
+    font-size: 80px;
+  }
+}
+
+#boton_home {
+  width: 200px;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  #boton_home {
+    width: 150px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #boton_home {
+    width: 160px;
+    font-size: 20px;
+  }
 }
