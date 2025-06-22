@@ -1,0 +1,61 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+
+                                        /*? CSS NAVBAR */
+nav{
+    background-color: rgb(31, 28, 28);
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.nav-buttons a{
+    color: aliceblue;
+    margin: 15px;
+}
+
+.logo_img img{
+    width: 5rem;
+    transition: 450ms;
+}
+
+.logo_img img:hover{
+    transform: scale(1.15);
+}
+
+.white-toggle .navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-toggler{
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+
+                                        /*? ************************ */
+
+
+                                        /*? CSS Detalles de la carta  */
+
+
+.main-card{
+    background-color: #ffffff;
+    padding: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.related-cards-section{ 
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+                                        /*? ************************ */
+

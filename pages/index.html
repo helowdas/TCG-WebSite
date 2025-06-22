@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet">
 </head>
 <body>
     
 
     <nav class="navbar navbar-expand-lg">
     <div class="container-fluid logo_img">
-        <a class="navbar-brand" href="#"><img src="img/TCG_Logo.png"></a>
+        <a class="navbar-brand" href="#"><img src="/assets/TCG_Logo.png"></a>
         <button class="navbar-toggler white-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,13 +34,12 @@
     
 
     <div class="container">
-
         <h1 class="text-center mb-5">Detalle de Carta Pokémon</h1>
 
         <!-- *Sección de Detalle de Carta Seleccionada -->
         <div class="row">
             <div class="col-12">
-                <div id="selected-card-detail" class="main-card-detail">
+                <div id="selected-card" class="main-card">
                     <!-- *El contenido se cargará aquí directamente -->
                 </div>
             </div>
@@ -57,13 +56,14 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
 
 
-
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tcgdex/sdk@2/dist/tcgdex.browser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
 </body>
 </html>
