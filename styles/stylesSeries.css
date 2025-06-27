@@ -19,6 +19,12 @@ body
     object-fit: contain;
 }
 
+.iconSerie
+{
+    background-color: whitesmoke;
+    font-size: 100px;
+    padding: 2px 25px;
+}
 
 .text-secondary-1
 {
