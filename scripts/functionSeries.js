@@ -36,7 +36,7 @@ $(document).ready(function()
                 {
                     $("#list-series").append
                     (
-                        `<div class="row mb-4 d-flex g-2 g-sm-0 align-items-center justify-content-center">
+                        `<div class="row mb-4 mt-2 d-flex g-2 g-sm-0 align-items-center justify-content-center">
 
                             <div class="col-12 col-sm-3 text-center">
                                 <!-- imagen de la serie -->
