@@ -3,6 +3,7 @@ $(document).ready(function(){
     //? inicializar el cliente 
     const tcgdex = new TCGdex('es');
 
+
     
     //? Funcion para cargar los detalles de una carta 
 
@@ -15,7 +16,8 @@ $(document).ready(function(){
         try{
             const card = await tcgdex.fetch('cards',card_id);
             //const imageUrl = card.logo;
-            console.log(card)
+            //console.log(card)
+            
 
             let cardHtml = `
                         <div class="card border-0"> 
