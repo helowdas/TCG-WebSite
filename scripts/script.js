@@ -8,15 +8,13 @@ $(document).ready(function(){
     //? Funcion para cargar los detalles de una carta 
 
     async function loadCardDetails(card_id) {
-        
+
         $('#selected-card').html('<p class="text-center text-muted">Cargando detalles de la carta...</p>');
         $('#related-cards-list').html('<p class="text-center text-muted">Cargando cartas relacionadas...</p>');
 
 
         try{
             const card = await tcgdex.fetch('cards',card_id);
-            //const imageUrl = card.logo;
-            //console.log(card)
             
 
             let cardHtml = `
@@ -75,7 +73,7 @@ $(document).ready(function(){
                     }
 
         }catch(error){
-            // ?Manejo de errores en caso de que la API falle o la carta no se encuentre
+                    // ?                            -- Manejo de errores en caso de que la API falle o la carta no se encuentre --
                     console.error("Error al cargar los detalles de la carta:", error);
                     let errorMessage = '<p class="text-center text-danger">Error al cargar los detalles de la carta. Inténtalo de nuevo más tarde.</p>';
                     if (error.status === 404) {
@@ -88,7 +86,7 @@ $(document).ready(function(){
         }
     }
 
-    // --- Función para cargar cartas relacionadas de una expansión ---
+    //?                                       --- Función para cargar cartas relacionadas de una expansión ---
             async function loadRelatedCards(setId, currentCardId) {
                 try {
                     // Usa el SDK para obtener la información completa del set
@@ -123,13 +121,45 @@ $(document).ready(function(){
                 }
             }
 
-            // --- Función principal para iniciar la carga de la carta aleatoria ---
-            async function initRandomScarletVioletCard() {
-                try {
+            async function get_expansion_DR() {
                     // Obtener la información de la serie Escarlata y Púrpura (ID 'sv')
                     const svSeries = await tcgdex.fetch('series', 'sv');
 
-                    if (!svSeries || !svSeries.sets || svSeries.sets.length === 0) {
+                    // Buscar el set con nombre "Destined Rivals" o id "sv10"
+                    const destinedRivalsSet = svSeries.sets.find(set => set.name === "Destined Rivals" || set.id === "sv10");
+
+                    if (!destinedRivalsSet) {
+                        $('#selected-card').html('<p class="text-center text-danger">No se encontró la expansión Destined Rivals.</p>');
+                        return;
+                    }
+                    console.log('FUNCION DE GET EXPANSION DR');
+                    console.log(destinedRivalsSet);
+
+                    // Obtener los detalles completos del set Destined Rivals
+                    const fullSet = await tcgdex.fetch('sets', destinedRivalsSet.id);
+
+                    // Ahora puedes trabajar con fullSet.cards, etc.
+                    // Ejemplo: mostrar una carta aleatoria de Destined Rivals
+                    const playableCards = fullSet.cards.filter(c => c.id && c.image);
+                    if (playableCards.length === 0) {
+                        $('#selected-card').html('<p class="text-center text-danger">No hay cartas válidas en Destined Rivals.</p>');
+                        return;
+                    }
+                    const randomCard = playableCards[Math.floor(Math.random() * playableCards.length)];
+                    loadCardDetails(randomCard.id);
+                }
+
+            //? --- Funcion para obtener informacion de la API (serie escarlata y expansion Destined rivals)
+
+            async function get_expansion() {
+                // Obtener la información de la serie Escarlata y Púrpura (ID 'sv')
+                const svSeries = await tcgdex.fetch('series','sv');
+
+                //const destinedRivalsSet = svSeries.sets.find(set => set.name === "Destined Rivals" || set.id === "sv10");
+
+                
+
+                if (!svSeries || !svSeries.sets || svSeries.sets.length === 0) {
                         $('#selected-card').html('<p class="text-center text-danger">No se encontraron sets para la serie Escarlata y Púrpura.</p>');
                         return;
                     }
@@ -160,7 +190,7 @@ $(document).ready(function(){
                     if (playableCards.length === 0) {
                         $('#selected-card').html(`<p class="text-center text-danger">El set ${randomSet.name} no contiene cartas válidas para mostrar.</p>`);
                         return;
-                    }
+                    }   
 
                     // Seleccionar una carta aleatoria de ese set
                     const randomCardIndex = Math.floor(Math.random() * playableCards.length);
@@ -168,6 +198,17 @@ $(document).ready(function(){
 
                     // Cargar los detalles de la carta aleatoria
                     loadCardDetails(randomCard.id);
+
+                    
+            }
+
+            //? ---                           Función principal para iniciar la carga de la carta aleatoria ---
+            async function initRandomScarletVioletCard() {
+                try {
+                    
+                    //get_expansion();
+
+                    get_expansion_DR();
 
                 } catch (error) {
                     console.error("Error al inicializar la carta aleatoria de Escarlata y Púrpura:", error);
@@ -178,14 +219,4 @@ $(document).ready(function(){
 
             // Inicia el proceso para cargar una carta aleatoria de Escarlata y Púrpura al cargar la página
             initRandomScarletVioletCard();
-
-
-
-
-
-
-
-
-
-
 });
