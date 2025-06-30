@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link href="/styles/style.css" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid logo_img">
+        <a class="navbar-brand" href="#"><img src="/sources/TCG_Logo.png" /></a>
+        <button
+          class="navbar-toggler white-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav nav-buttons">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Disabled</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Página de Bienvenida -->
+
+    <!-- Carrusel -->
+    <div class="container-fluid p-0">
+      <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <div class="carousel-caption carousel-centered-caption">
+            <h1 id="titulo">Pokemon TGC</h1>
+          </div>
+
+          <button
+            type="button"
+            data-bs-target="#carrusel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrusel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrusel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/sources/fondo1.jpg"
+              class="d-block w-100"
+              alt="Descripción de la imagen 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/sources/fondo2.webp"
+              class="d-block w-100"
+              alt="Descripción de la imagen 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/sources/fondo3.jpeg"
+              class="d-block w-100"
+              alt="Descripción de la imagen 3"
+            />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carrusel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carrusel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secciones de la página de bienvenida -->
+
+    <!-- Sección 1 -->
+    <div class="row" id="jugar fondo1">
+      <div class="col-12">
+        <div class="row text-center p-2">
+          <h2 id="titulo_jugar">¡Juega Ya!</h2>
+        </div>
+
+        <div class="row justify-content-center align-items-center py-3">
+          <div class="col-auto">
+            <img
+              src="/sources/jcc_imagen.png"
+              class="img-jcc-size"
+              alt="Imagen JCC"
+              id="imagen_seccion_home"
+            />
+            <iconify-icon
+              icon="mdi:controller"
+              class="iconify-section-home"
+            ></iconify-icon>
+          </div>
+          <div class="col-md-7 col-lg-7 text-justify">
+            <p class="mb-0 px-5" id="texto_home">
+              ¡Atención, Entrenador! Sumérgete en el emocionante mundo del Juego
+              de Cartas Coleccionables Pokémon. Construye tu mazo, desafía a tus
+              amigos y demuestra quién es el verdadero Maestro. ¡Juega ya!
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-12 d-flex justify-content-center">
+            <a
+              href="#"
+              class="btn btn-primary btn-sm"
+              role="button"
+              id="boton_home"
+              >Visitar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección 2 -->
+    <div class="row" id="novedades fondo0">
+      <div class="col-12">
+        <div class="row text-center p-2">
+          <h2 id="titulo_jugar">¡Novedades!</h2>
+        </div>
+
+        <div class="row justify-content-center align-items-center py-3">
+          <div class="col-md-7 col-lg-7 text-justify">
+            <p class="mb-0 px-5" id="texto_home">
+              !Es hora de estar al tanto de todo! Si quieres conocer las últimas
+              noticias, eventos emocionantes y anuncios importantes del Juego de
+              Cartas Coleccionables Pokémon, nuestra sección de Novedades es tu
+              mejor aliado.
+            </p>
+          </div>
+          <div class="col-auto">
+            <img
+              src="/sources/imagen_charizard.png"
+              class="img-jcc-size"
+              alt="imagen_seccion_home"
+              id="imagen_seccion_home"
+            />
+            <iconify-icon
+              icon="mdi:newspaper-variant-multiple-outline"
+              class="iconify-section-home"
+            ></iconify-icon>
+          </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-12 d-flex justify-content-center">
+            <a
+              href="#"
+              class="btn btn-primary btn-sm"
+              role="button"
+              id="boton_home"
+              >Visitar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección 3 -->
+    <div class="row" id="catalogo fondo1">
+      <div class="col-12">
+        <div class="row text-center p-2">
+          <h2 id="titulo_jugar">Conoce el catálogo de cartas</h2>
+        </div>
+
+        <div class="row justify-content-center align-items-center py-3">
+          <div class="col-auto">
+            <img
+              src="/sources/libros.png"
+              class="img-jcc-size"
+              alt="imagen_seccion_home"
+              id="imagen_seccion_home"
+            />
+            <iconify-icon
+              icon="mdi:cards"
+              class="iconify-section-home"
+            ></iconify-icon>
+          </div>
+          <div class="col-md-7 col-lg-7 text-justify">
+            <p class="mb-0 px-5" id="texto_home">
+              ¿Listo para descubrir el vasto universo de Pokémon en el Juego de
+              Cartas Coleccionables? Nuestro catálogo de cartas es tu puerta de
+              entrada para conocer a fondo cada criatura, objeto y energía que
+              existe en el juego.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-12 d-flex justify-content-center">
+            <a
+              href="#"
+              class="btn btn-primary btn-sm"
+              role="button"
+              id="boton_home"
+              >Visitar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección 4 -->
+    <div class="row" id="descubrir fondo0">
+      <div class="col-12">
+        <div class="row text-center p-2">
+          <h2 id="titulo_jugar">Descubre más sobre el TGC</h2>
+        </div>
+
+        <div class="row justify-content-center align-items-center py-3">
+          <div class="col-md-7 col-lg-7 text-justify">
+            <p class="mb-0 px-5" id="texto_home">
+              ¿Sientes la emoción del combate de cartas? El Juego de Cartas
+              Coleccionables Pokémon (JCC Pokémon o TCG) es mucho más que un
+              simple juego: es una apasionante aventura estratégica donde tus
+              Pokémon favoritos cobran vida en el campo de batalla.
+            </p>
+          </div>
+          <div class="col-auto">
+            <img
+              src="/sources/piplo.png"
+              class="descubrir imagen_seccion_home"
+              alt="imagen_seccion_home"
+              id="imagen_seccion_home"
+            />
+            <iconify-icon
+              icon="mdi:magnify"
+              class="iconify-section-home"
+            ></iconify-icon>
+          </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-12 d-flex justify-content-center">
+            <a
+              href="#"
+              class="btn btn-primary btn-sm"
+              role="button"
+              id="boton_home"
+              >Visitar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección 5 -->
+    <div class="row" id="aprender fondo1">
+      <div class="col-12">
+        <div class="row text-center p-2">
+          <h2 id="titulo_jugar">Aprende a jugar</h2>
+        </div>
+
+        <div class="row justify-content-center align-items-center py-3">
+          <div class="col-auto">
+            <img
+              src="/sources/juego.png"
+              class="juego imagen_seccion_home"
+              alt="imagen_seccion_home"
+              id="imagen_seccion_home"
+            />
+            <iconify-icon
+              icon="mdi:gamepad-variant-outline"
+              class="iconify-section-home"
+            ></iconify-icon>
+          </div>
+          <div class="col-md-7 col-lg-7 text-justify">
+            <p class="mb-0 px-5" id="texto_home">
+              ¿Eres nuevo en el Juego de Cartas Coleccionables Pokémon y quieres
+              empezar a jugar? ¡Estás en el lugar correcto! Aquí te guiaremos
+              paso a paso para que domines los fundamentos y estés listo para tu
+              primera batalla.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-12 d-flex justify-content-center">
+            <a
+              href="how2play.html"
+              class="btn btn-primary btn-sm"
+              role="button"
+              id="boton_home"
+              >Visitar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/functionHome.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+
+/* Navbar */
+nav {
+  background-color: rgb(31, 28, 28);
+  font-family: "Pokemon Solid", sans-serif;
+}
+
+.nav-buttons a {
+  color: aliceblue;
+  margin: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-buttons a {
+    margin: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-buttons a {
+    margin: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+.logo_img img {
+  width: 5rem;
+  transition: 450ms;
+}
+
+.logo_img img:hover {
+  transform: scale(1.15);
+}
+
+.white-toggle .navbar-toggler-icon {
+  filter: invert(1);
+}
+.navbar-toggler {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+
+/* -Página Home- */
+
+/* Carrusel */
+#titulo {
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: 40px;
+  color: rgb(255, 234, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  #titulo {
+    font-size: 30px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #titulo {
+    font-size: 24px;
+    padding: 6px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #titulo {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
+.carousel-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 992px) {
+  .carousel-item img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100px;
+  height: 100px;
+  background-size: 100% 100%;
+  filter: brightness(0%);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Secciones */
+
+[id*="fondo1"] {
+  background-color: rgb(31, 28, 28);
+  color: white;
+  padding: 20px;
+}
+
+#texto_home {
+  font-size: 2vw;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  #texto_home {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #texto_home {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #texto_home {
+    font-size: 4.5vw;
+  }
+}
+
+[id*="imagen_seccion_home"] {
+  width: 50vw;
+  max-width: 400px;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 20px auto;
+}
+
+@media (max-width: 992px) {
+  [id*="imagen_seccion_home"] {
+    width: 60vw;
+    max-width: 300px;
+    max-height: 250px;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  [id*="imagen_seccion_home"] {
+    width: 70vw;
+    max-width: 250px;
+    max-height: 200px;
+    display: block;
+  }
+}
+
+.iconify-section-home {
+  display: none;
+  font-size: 100px;
+  color: rgb(153, 153, 151);
+  margin: 20px auto;
+}
+
+@media (max-width: 480px) {
+  [id*="imagen_seccion_home"] {
+    display: none;
+  }
+
+  .iconify-section-home {
+    display: block;
+    font-size: 80px;
+  }
+}
+
+#boton_home {
+  width: 200px;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  #boton_home {
+    width: 150px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #boton_home {
+    width: 160px;
+    font-size: 20px;
+  }
+}
+
+/* Side Cards */
+.side-card {
+  position: absolute;
+  top: 50%;
+  width: 110px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+  background: #fff;
+  z-index: 2;
+  transform: translateY(-50%);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.side-card-left {
+  left: 10px;
+}
+.side-card-right {
+  right: 10px;
+}
+.side-card:hover {
+  transform: translateY(-50%) scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+@media (max-width: 900px) {
+  .side-card {
+    width: 70px;
+    height: 100px;
+  }
+  .side-card-left {
+    left: 2px;
+  }
+  .side-card-right {
+    right: 2px;
+  }
+}
+@media (max-width: 600px) {
+  .side-card {
+    display: none;
+  }
+}
+
+/* JCC Random Card */
+#carrusel {
+  position: relative;
+}
+#jcc-random-card {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+  pointer-events: none;
+}
+.jcc-random-img {
+  width: 220px;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: #fff;
+  transition: transform 0.2s;
+  pointer-events: auto;
+}
+.jcc-random-img:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+@media (max-width: 600px) {
+  .jcc-random-img {
+    width: 120px;
+    height: 180px;
+  }
+  #jcc-random-card {
+    top: 20px;
+  }
+}

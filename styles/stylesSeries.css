@@ -1,0 +1,32 @@
+/* definicion de variables */
+:root
+{
+ --color-background: #1F1A14;
+ --color-secondary: #BFB09E;
+}
+
+body
+{
+    background-color: var(--color-background);
+}
+
+
+.imgSerie
+{
+    width: 150px;
+    background-color: whitesmoke;
+    height: 125px;
+    object-fit: contain;
+}
+
+.iconSerie
+{
+    background-color: whitesmoke;
+    font-size: 100px;
+    padding: 1px 25px;
+}
+
+.text-secondary-1
+{
+    color: var(--color-secondary);
+}
