@@ -120,7 +120,7 @@ $(document).ready(function(){
                     $('#related-cards-list').html('<p class="text-center text-danger w-100">Error al cargar las cartas relacionadas.</p>');
                 }
             }
-
+            //? --- Funcion para obtener informacion de la API (serie escarlata y expansion Destined rivals)
             async function get_expansion_DR() {
                     // Obtener la información de la serie Escarlata y Púrpura (ID 'sv')
                     const svSeries = await tcgdex.fetch('series', 'sv');
@@ -149,64 +149,12 @@ $(document).ready(function(){
                     loadCardDetails(randomCard.id);
                 }
 
-            //? --- Funcion para obtener informacion de la API (serie escarlata y expansion Destined rivals)
-
-            async function get_expansion() {
-                // Obtener la información de la serie Escarlata y Púrpura (ID 'sv')
-                const svSeries = await tcgdex.fetch('series','sv');
-
-                //const destinedRivalsSet = svSeries.sets.find(set => set.name === "Destined Rivals" || set.id === "sv10");
-
-                
-
-                if (!svSeries || !svSeries.sets || svSeries.sets.length === 0) {
-                        $('#selected-card').html('<p class="text-center text-danger">No se encontraron sets para la serie Escarlata y Púrpura.</p>');
-                        return;
-                    }
-
-                    // Filtrar sets que no tengan un número total de cartas (posibles errores de datos)
-                    const validSvSets = svSeries.sets.filter(set => set.cardCount && set.cardCount.total > 0);
-
-                    if (validSvSets.length === 0) {
-                        $('#selected-card').html('<p class="text-center text-danger">No se encontraron sets válidos en la serie Escarlata y Púrpura con cartas.</p>');
-                        return;
-                    }
-
-                    // Seleccionar un set aleatorio de la serie Escarlata y Púrpura
-                    const randomSetIndex = Math.floor(Math.random() * validSvSets.length);
-                    const randomSet = validSvSets[randomSetIndex];
-                    
-                    // Obtener los detalles completos de ese set aleatorio para acceder a sus cartas
-                    const fullRandomSet = await tcgdex.fetch('sets', randomSet.id); // Corregido: Usar tcgdex.fetch('sets', idDelSet)
-
-                    if (!fullRandomSet || !fullRandomSet.cards || fullRandomSet.cards.length === 0) {
-                        $('#selected-card').html(`<p class="text-center text-danger">No se encontraron cartas en el set aleatorio: ${randomSet.name}.</p>`);
-                        return;
-                    }
-
-                    // Filtrar cartas que no tengan ID o imagen (para evitar errores al renderizar)
-                    const playableCards = fullRandomSet.cards.filter(c => c.id && c.image);
-
-                    if (playableCards.length === 0) {
-                        $('#selected-card').html(`<p class="text-center text-danger">El set ${randomSet.name} no contiene cartas válidas para mostrar.</p>`);
-                        return;
-                    }   
-
-                    // Seleccionar una carta aleatoria de ese set
-                    const randomCardIndex = Math.floor(Math.random() * playableCards.length);
-                    const randomCard = playableCards[randomCardIndex];
-
-                    // Cargar los detalles de la carta aleatoria
-                    loadCardDetails(randomCard.id);
-
-                    
-            }
+            
 
             //? ---                           Función principal para iniciar la carga de la carta aleatoria ---
             async function initRandomScarletVioletCard() {
                 try {
                     
-                    //get_expansion();
 
                     get_expansion_DR();
 

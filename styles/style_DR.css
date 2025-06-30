@@ -41,8 +41,8 @@ nav{
             margin-bottom: 40px;
             background-color: #ffffff;
             padding: 30px;
-            border-radius: 12px; /* Esquinas más redondeadas */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra suave y atractiva */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
         }
 
 
@@ -68,7 +68,7 @@ nav{
         }
 
         .main-card .card-title {
-            font-size: 2.5em; /* Título de la carta más grande */
+            font-size: 2.5em; 
             font-weight: 700;
             color: #333;
             margin-bottom: 15px;
@@ -82,7 +82,7 @@ nav{
             margin: 0 auto 20px auto; /* Centra y añade margen inferior */
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid #ddd; /* Borde fino para la imagen */
+            border: 1px solid #ddd; 
         }
         .main-card .card-text strong {
             color: #495057; 
@@ -129,10 +129,10 @@ nav{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px; /* Espacio entre las cartas relacionadas */
+            gap: 15px; 
         }
         #related-cards-list .card {
-            width: 10rem; /* Ancho fijo para las cartas relacionadas */
+            width: 10rem;
             border: 1px solid #ced4da;
             box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.05);
             transition: transform 0.2s ease-in-out;
@@ -141,8 +141,8 @@ nav{
             transform: translateY(-5px);
         }
         #related-cards-list .card-img-top {
-            height: 140px; /* Altura fija para las imágenes de las cartas relacionadas */
-            object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+            height: 140px; 
+            object-fit: contain; /*! Asegura que la imagen se ajuste sin recortarse */
             padding: 5px;
         }
         #related-cards-list .card-body {
