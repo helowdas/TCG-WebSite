@@ -1,3 +1,16 @@
+
+
+//funcion unica para sacar los pokemones random de las cartas relacionadas a una expanison
+function random_array(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+
+
 $(document).ready(function(){
 
     //? inicializar el cliente 
@@ -15,7 +28,7 @@ $(document).ready(function(){
 
         try{
             const card = await tcgdex.fetch('cards',card_id);
-            
+
 
             let cardHtml = `
                         <div class="card border-0"> 
@@ -88,6 +101,7 @@ $(document).ready(function(){
 
     //?                                       --- Función para cargar cartas relacionadas de una expansión ---
             async function loadRelatedCards(setId, currentCardId) {
+
                 try {
                     // Usa el SDK para obtener la información completa del set
                     const set = await tcgdex.fetch('sets', setId); 
@@ -95,16 +109,22 @@ $(document).ready(function(){
                     // Filtra las cartas del set: excluye la carta actual y solo incluye las que tienen imagen y nombre
                     const relatedCards = set.cards.filter(c => c.id !== currentCardId && c.image && c.name);
 
+
+                    console.log('INFORMACION CARTAS RELACIONADAS')
+                    console.log(relatedCards);
+
+
                     let relatedCardsHtml = '';
                     if (relatedCards.length > 0) {
-                        // Limita el número de cartas relacionadas para un rendimiento óptimo
-                        // Puedes ajustar este límite (ej. 15, 20) según tus necesidades
-                        const limitedRelatedCards = relatedCards.slice(0, 15); 
+                        
+                        const random_related_cards = random_array([...relatedCards]);
+
+                        const limitedRelatedCards = random_related_cards.slice(0, 20); 
                         relatedCardsHtml = limitedRelatedCards.map(c => {
-                            const relatedImageUrl = c.image; // La URL de la imagen ya viene del SDK
+                            const relatedImageUrl = c.image;
                             return `
                                 <div class="card">
-                                    <img src="${relatedImageUrl}/high.png" class="card-img-top" alt="Imagen de ${c.name}" loading="lazy">
+                                    <img src="${relatedImageUrl}/low.webp" class="card-img-top" alt="Imagen de ${c.name}" loading="lazy">
                                     <div class="card-body">
                                         <p class="card-text">${c.name}</p>
                                     </div>
@@ -114,12 +134,15 @@ $(document).ready(function(){
                     } else {
                         relatedCardsHtml = '<p class="text-center text-muted w-100">No se encontraron otras cartas en esta expansión.</p>';
                     }
+                
                     $('#related-cards-list').html(relatedCardsHtml);
                 } catch (error) {
                     console.error("Error al cargar las cartas relacionadas:", error);
                     $('#related-cards-list').html('<p class="text-center text-danger w-100">Error al cargar las cartas relacionadas.</p>');
                 }
+
             }
+
             //? --- Funcion para obtener informacion de la API (serie escarlata y expansion Destined rivals)
             async function get_expansion_DR() {
                     // Obtener la información de la serie Escarlata y Púrpura (ID 'sv')
@@ -132,13 +155,16 @@ $(document).ready(function(){
                         $('#selected-card').html('<p class="text-center text-danger">No se encontró la expansión Destined Rivals.</p>');
                         return;
                     }
+
                     console.log('FUNCION DE GET EXPANSION DR');
                     console.log(destinedRivalsSet);
 
                     // Obtener los detalles completos del set Destined Rivals
                     const fullSet = await tcgdex.fetch('sets', destinedRivalsSet.id);
 
-                    // Ahora puedes trabajar con fullSet.cards, etc.
+                    console.log('INFORMACION DE LA CARTA')
+                    console.log(fullSet); 
+
                     // Ejemplo: mostrar una carta aleatoria de Destined Rivals
                     const playableCards = fullSet.cards.filter(c => c.id && c.image);
                     if (playableCards.length === 0) {
