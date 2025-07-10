@@ -77,10 +77,10 @@ nav{
         }
         .main-card .img-fluid {
             max-width: 100%;
-            height: auto; /* Altura automática para mantener proporción */
-            max-height: 450px; /* Limita la altura máxima de la imagen principal */
+            height: auto; 
+            max-height: 450px; 
             display: block;
-            margin: 0 auto 20px auto; /* Centra y añade margen inferior */
+            margin: 0 auto 20px auto; 
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border: 1px solid #ddd; 
@@ -143,7 +143,7 @@ nav{
         }
         #related-cards-list .card-img-top {
             height: 140px; 
-            object-fit: contain; /*! Asegura que la imagen se ajuste sin recortarse */
+            object-fit: contain; 
             padding: 5px;
         }
         #related-cards-list .card-body {
