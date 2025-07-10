@@ -65,5 +65,74 @@ h1{
     
 }
 
+/* Cartas de expansión modernas */
+.card-expansion-modern {
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.15), 0 1.5px 6px rgba(44, 62, 80, 0.10);
+    transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.card-expansion-modern:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.22), 0 2px 8px rgba(44, 62, 80, 0.13);
+}
+.card-expansion-img {
+    height: 180px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%);
+    transition: transform 0.4s cubic-bezier(.4,2,.3,1);
+    border-radius: 1.2rem 1.2rem 0 0;
+    width: 100%;
+    display: block;
+}
+.card-expansion-modern:hover .card-expansion-img {
+    transform: scale(1.08) rotate(-2deg);
+}
+.expansion-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(44,62,80,0.85) 0%, rgba(44,62,80,0.0) 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #fff;
+    z-index: 2;
+    border-radius: 1.2rem;
+    pointer-events: none;
+}
+.card-expansion-modern:hover .expansion-overlay {
+    opacity: 1;
+}
+.expansion-overlay h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    margin: 0;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

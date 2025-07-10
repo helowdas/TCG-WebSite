@@ -1,4 +1,36 @@
 /* definicion de variables */
+
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+                                        /*? CSS NAVBAR */   
+nav{
+    background-color: rgb(31, 28, 28);
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.nav-buttons a{
+    color: aliceblue;
+    margin: 15px;
+}
+
+.logo_img img{
+    width: 5rem;
+    transition: 450ms;
+}
+
+.logo_img img:hover{
+    transform: scale(1.15);
+}
+
+.white-toggle .navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-toggler{
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+
+
 :root
 {
  --color-background: #1F1A14;
