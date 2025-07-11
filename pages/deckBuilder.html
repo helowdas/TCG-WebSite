@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importando iconos de material -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bid_landscape_disabled" />
+    <!-- Importando iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Importando codigo de bootstrap -->
+    <link rel="stylesheet" href="../styles/bootstrap_5.3_css/bootstrap.min.css">
+    <!-- Importando codigo CSS propio -->
+    <link rel="stylesheet" href="../styles/style_deckBuilder.css">
+    <!-- Importando codigo CSS navBar -->
+    <link rel="stylesheet" href="../styles/style_navBar.css">
+
+    <title>Deck Builder</title>
+    
+</head>
+<body>
+
+    <!-- navBar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container logo_img">
+            <a class="navbar-brand" href="#"><img src="../sources/TCG_Logo.png"></a>
+            <button class="navbar-toggler white-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-buttons">
+                <a class="nav-link" href="../index.html">Home</a>
+                <a class="nav-link" href="ExpansionSv.html">Expansiones</a>
+                <a class="nav-link" href="how2play.html">Como Jugar</a>
+                <a class="nav-link" href="series.html">Series</a>
+            </div>
+            </div>
+        </div>
+        </nav>
+    <!-- navBar -->
+
+    <!-- main -->
+    <main class="container">
+        
+        <!-- titulo -->
+        <div class="row my-4">
+            <div class="col">
+                <h1 class="fw-bolder fs-1 text-white text-center">Deck Builder</h1>
+            </div>
+        </div>
+
+        <!-- botones -->
+        <div class="row">
+            <!-- boton drop filter -->
+            <div class="col-12 d-flex justify-content-center">
+                <button class="btn btn-light" id="botonDrop"><i class="bi bi-caret-down-fill"></i> Expansiones</button>
+            </div>
+
+            <!-- seccion expansiones -->
+            <div class="col-12 mt-1 bg-body-secondary rounded-1 " id="slidefilters" style="display: none;">
+
+                <!-- check por defecto (todas) -->
+                <div class="row mb-2">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <input type="checkbox" id="todas" checked> 
+                        <label for="todas" class="form-label p-0 m-0 fs-5 fw-bold">&nbsp; todas</label>
+                    </div>
+                </div>
+
+                <!-- cargar todos los filtros -->
+                <div class="row mb-2" id="filtrosExpansiones">
+
+                    
+
+
+                </div>
+                
+
+            </div>
+
+            <!-- seccion btn deck builder -->
+            <div class="col-12 my-4 d-flex justify-content-center">
+                <button class="btn btn-lg btn-outline-light" id="botonDeck" disabled>Build Deck</button>
+            </div>
+        </div>
+
+        <!-- deck -->
+        <div class="row mt-4 justify-content-center">
+
+            <!-- titulo -->
+            <div class="col-12">
+                <h2 class="text-white fw-bold text-center fs-1">DECK</h2>
+            </div>
+
+            <!-- filtros deck -->
+            <div class="col-6 mt-2 d-flex justify-content-center">
+
+                <ul class="list-group list-group-horizontal" id="deckFilters">
+                    <li class="list-group-item list-group-item-action text-center active">Todas</li>
+                    <li class="list-group-item list-group-item-action text-center">Pokemons</li>
+                    <li class="list-group-item list-group-item-action text-center">Entrenador</li>
+                    <li class="list-group-item list-group-item-action text-center">Energías</li>
+                </ul>
+
+            </div>
+
+            <!-- separador -->
+            <hr class="mt-4 border-white border-3">
+
+            <!-- contadores -->
+            <div class="row mt-2">
+
+                <div class="col-12 mb-3">
+                    <p class="text-center text-white fs-4" id="deck-count">Deck Count: 0/60</p>
+                </div>
+
+                <div class="col-4">
+                    <p class="text-center text-white" id="pokemon-count">Pokemons (0)</p>
+                     <!-- separador -->
+                    <hr class="mt-4 border-white border-2">
+                </div>
+
+                <div class="col-4">
+                    <p class="text-center text-white" id="trainer-count">Trainers (0)</p>
+                     <!-- separador -->
+                    <hr class="mt-4 border-white border-2">
+                </div>
+
+                <div class="col-4">
+                    <p class="text-center text-white" id="energies-count">Energies (0)</p>
+                     <!-- separador -->
+                    <hr class="mt-4 border-white border-2">
+                </div>
+            </div>
+
+            <!-- cards baraja -->
+        
+            <div class="row" id="deck-cards">
+                <!-- Las cartas se agregarán aquí dinámicamente -->
+
+                
+            </div>
+            
+        </div>
+
+    </main>
+
+
+    
+
+
+    <!-- Importando codigo js de bootstrap -->
+    <script src="../scripts/bootstrap_5.3_js/bootstrap.bundle.min.js "></script>
+    <!-- Importando codigo jQuery -->
+    <script src="../scripts/jQuery_3.7.1/jQuery.js"></script>
+    <!-- Importando JS para la API de Pokemon -->
+    <script src="https://cdn.jsdelivr.net/npm/@tcgdex/sdk@2/dist/tcgdex.browser.js"></script>
+    <!-- Importando codigo js propio -->
+    <script src="../scripts/deckBuilder.js" defer></script>
+</body>
+</html>
