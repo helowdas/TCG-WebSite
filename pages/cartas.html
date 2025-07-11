@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartas - Rivales Predestinados</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../styles/stylescartas.css">
+
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- SDK de TCGdex -->
+  <script src="https://cdn.jsdelivr.net/npm/@tcgdex/sdk@2/dist/tcgdex.browser.js"></script>
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="../sources/TCG_Logo.png" alt="Logo Pokémon" class="logo" />
+      </a>
+
+      <!-- Botones de navegación -->
+      <nav class="navbar-nav nav-buttons d-flex flex-row gap-4">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="ExpansionSv.html">Expansiones</a>
+        <a class="nav-link" href="how2play.html">Cómo Jugar</a>
+        <a class="nav-link" href="series.html">Series</a>
+        <a class="nav-link" href="buildDeck.html">Build Deck</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- CONTENIDO -->
+    <div class="container mt-5">
+    <h1 class="text-center mb-4">Cartas de Rivales Predestinados</h1>
+
+    <!-- Filtro -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-4">
+        <select id="filtro-rareza" class="form-select" disabled>
+          <option value="">Rareza</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Cartas -->
+    <div id="cartas-container" class="row justify-content-center"></div>
+
+    <!-- Paginación separada -->
+    <div id="pagination" class="mt-4 d-flex justify-content-center flex-wrap gap-2"></div>
+  </div>
+    <!-- JS personalizado -->
+  <script src="../scripts/cartas.js" defer></script>
+</body>
+</html>
