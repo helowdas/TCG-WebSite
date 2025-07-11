@@ -4,6 +4,7 @@ $(document).ready(function()
     const tcgdex = new TCGdex('en');
 
     // esta funcion carga las series
+    localStorage.setItem('idSerie', 'sv');
     getSeries()
 
 
@@ -36,7 +37,7 @@ $(document).ready(function()
                 {
                     $("#list-series").append
                     (
-                        `<div class="row mb-4 mt-2 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover">
+                        `<div class="row mb-4 mt-2 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover" data-id=${serie.id}>
 
                             <div class="col-12 col-sm-3 text-center">
                                 <!-- imagen de la serie -->
@@ -55,7 +56,7 @@ $(document).ready(function()
                 {
                     $("#list-series").append
                     (
-                        `<div class="row mb-4 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover">
+                        `<div class="row mb-4 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover" data-id=${serie.id}>
     
                             <div class="col-12 col-sm-3 text-center">
                                 <!-- imagen de la serie -->
@@ -84,6 +85,14 @@ $(document).ready(function()
                 '<p class="text-white h5">Error al cargar las series. Por favor, inténtelo de nuevo.</p></p>'
             )
         }
+
+        $(".serie-hover").click(function() 
+        {
+            window.location.href = "../pages/ExpansionSv.html";
+            let idSerie = $(this).data("id");
+            localStorage.setItem('idSerie', idSerie);
+
+        });
     }
 })
 

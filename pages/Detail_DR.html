@@ -6,23 +6,26 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="/styles/style_DR.css" rel="stylesheet">
+    <link href="/styles/stylesFooter.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     
 
     <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container logo_img">
-        <a class="navbar-brand" href="#"><img src="/assets/TCG_Logo.png"></a>
+        <a class="navbar-brand" href="#"><img src="/sources/TCG_Logo.png"></a>
         <button class="navbar-toggler white-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav nav-buttons">
-            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
             <a class="nav-link" href="ExpansionSv.html">Expansiones</a>
             <a class="nav-link" href="how2play.html">Como Jugar</a>
             <a class="nav-link" href="series.html">Series</a>
+            <a class="nav-link" href="#">Build Deck</a>
         </div>
         </div>
     </div>
@@ -60,7 +63,39 @@
         </div>
     </div>
 
+    <footer>
+        <div class="footer-container">
+            
+            <!-- Sección izquierda: íconos -->
+        <!-- Sección izquierda: íconos -->
+        <div class="footer-left">
+        <i class="fab fa-facebook-f social-icon"></i>
+        <i class="fab fa-youtube social-icon"></i>
+        <i class="fab fa-twitter social-icon"></i>
+        <i class="fab fa-instagram social-icon"></i>
+        </div>
+        
+            <!-- Sección central: carrusel -->
+            <div class="footer-center">
+            <img id="ods-image" src="imagen1.jpg" alt="img ODS">
+            </div>
+        
+            <!-- Sección derecha: boletín -->
+            <div class="footer-right">
+            <form>
+                <button type="submit">Suscribete</button>
+            </form>
+            </div>
+        
+        </div>
+        
+        <!-- Sección inferior: copyright -->
+        <div class="footer-bottom">
+            <p>Text Copyright</p>
+        </div>
+        </footer>
 
+    <script src="/scripts/scriptFooter.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/scripts/Detail_DR.js"></script>
