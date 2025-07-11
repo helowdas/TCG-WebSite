@@ -1,0 +1,146 @@
+/* ESCALA GLOBAL DE LA PÁGINA */
+html {
+  font-size: 18px; /* Aumenta el tamaño general del contenido */
+  /* zoom: 1.2; */  /* Opcional: puedes usar esto en vez de font-size */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* SECCIÓN PRINCIPAL */
+main {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: auto;
+  color: #444;
+}
+
+/* FOOTER */
+footer {
+  background-color: #ffffff;
+  color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+/* ÍCONOS REDES SOCIALES */
+.footer-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-left .social-icon {
+  font-size: 2.5rem;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-left .social-icon:hover {
+  color: #666;
+  transform: scale(1.15);
+}
+
+/* CARRUSEL DE IMÁGENES ODS */
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-center img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  background-color: #eee;
+  border-radius: 14px;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-center img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.footer-center .caption {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* BOTÓN DE SUSCRIPCIÓN */
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-right button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-right button:hover {
+  background-color: #444;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin: 2rem 0;
+  }
+
+  .footer-center img {
+    width: 200px;
+    height: 200px;
+  }
+}
