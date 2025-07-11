@@ -36,7 +36,7 @@ $(document).ready(function()
                 {
                     $("#list-series").append
                     (
-                        `<div class="row mb-4 mt-2 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover">
+                        `<div class="row mb-4 mt-2 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover" data-id="${serie.id}">
 
                             <div class="col-12 col-sm-3 text-center">
                                 <!-- imagen de la serie -->
@@ -55,7 +55,7 @@ $(document).ready(function()
                 {
                     $("#list-series").append
                     (
-                        `<div class="row mb-4 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover">
+                        `<div class="row mb-4 d-flex g-2 g-sm-0 align-items-center justify-content-center rounded-4 serie-hover" data-id="${serie.id}">
     
                             <div class="col-12 col-sm-3 text-center">
                                 <!-- imagen de la serie -->
