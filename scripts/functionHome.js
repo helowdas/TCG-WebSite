@@ -1,6 +1,6 @@
 // Script para consumir la API de Pokémon TCG y mostrar cartas aleatorias en el banner
 // Documentación de la API: https://docs.pokemontcg.io/
-
+localStorage.setItem('idSerie', 'sv');
 const API_URL = "https://api.pokemontcg.io/v2/cards?pageSize=10";
 
 async function fetchRandomCards() {
@@ -106,6 +106,7 @@ async function showRandomJCCCard() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+  
   await showRandomJCCCard();
   if (jccCardInterval) clearInterval(jccCardInterval);
   jccCardInterval = setInterval(showRandomJCCCard, 3500); // Cambia cada 3.5 segundos

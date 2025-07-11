@@ -1,4 +1,7 @@
 
+
+
+
 // Función para obtener información detallada de un set específico
 async function get_set_info(tcgdex, setId) {
     try {
@@ -14,8 +17,14 @@ async function get_set_info(tcgdex, setId) {
 //? anteriormente se hacia un foreach pero no era optimo haciendo que se cargue muy lento la pagina
 async function get_all_expansions_sv_with_dates(tcgdex) {
     try {
-        const svSeries = await tcgdex.fetch('series', 'sv');
+        // Obtener el ID de la serie desde localStorage
+        let id_serie = localStorage.getItem('idSerie');
+        console.log("ID de serie obtenido:", id_serie);
+
+        const svSeries = await tcgdex.fetch('series', id_serie );
         console.log("Series obtenida:", svSeries);
+
+        $("#title-expansion").text("Expansiones "+svSeries.name);
 
         const all_expansions = svSeries.sets;
         console.log("Expansiones obtenidas:", all_expansions.length);
