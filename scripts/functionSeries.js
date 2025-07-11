@@ -4,6 +4,7 @@ $(document).ready(function()
     const tcgdex = new TCGdex('en');
 
     // esta funcion carga las series
+    localStorage.setItem('idSerie', 'sv');
     getSeries()
 
 
