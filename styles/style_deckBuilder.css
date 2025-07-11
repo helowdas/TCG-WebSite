@@ -1,0 +1,29 @@
+/* variables seccion series */
+
+:root
+{
+ --color-background: #1F1A14;
+ --color-secondary: #BFB09E;
+}
+
+body
+{
+    background-color: var(--color-background);
+}
+
+/* estilos para los filtros del deck */
+
+.list-group-item.active 
+{
+    background-color: var(--color-secondary) !important; /* rojo Bootstrap */
+    color: black !important;
+    border-color: var(--color-secondary) !important;
+}
+
+.list-group-item 
+{
+    background-color: transparent !important; /* rojo Bootstrap */
+    color: #fff !important;
+    border-color: #fff !important;
+
+}

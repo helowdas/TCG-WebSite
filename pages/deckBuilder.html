@@ -10,9 +10,12 @@
     <!-- Importando codigo de bootstrap -->
     <link rel="stylesheet" href="../styles/bootstrap_5.3_css/bootstrap.min.css">
     <!-- Importando codigo CSS propio -->
-    <link rel="stylesheet" href="../styles/stylesSeries.css">
+    <link rel="stylesheet" href="../styles/style_deckBuilder.css">
+    <!-- Importando codigo CSS navBar -->
+    <link rel="stylesheet" href="../styles/style_navBar.css">
 
-    <title>Series de pokemon(TV)</title>
+    <title>Deck Builder</title>
+    
 </head>
 <body>
 
@@ -35,36 +38,62 @@
         </div>
         </nav>
     <!-- navBar -->
-    
-    <Main class="container">
 
+    <!-- main -->
+    <main class="container">
+        
         <!-- titulo -->
-        <div class="row my-5">
-            <div class="col-12">
-                <h1 class="text-white mb-3">Series de Expansiones</h1>
-                <p class="text-secondary-1">Explora todas las series de Pokemon TCG.</p>
-            </div>    
+        <div class="row my-4">
+            <div class="col">
+                <h1 class="fw-bolder fs-1 text-white text-center">Deck Builder</h1>
+            </div>
         </div>
 
-        <!-- Titulo Series -->
-        <div class="row mb-5">
+        <!-- botones -->
+        <div class="row">
+            <!-- boton drop filter -->
+            <div class="col-12 d-flex justify-content-center">
+                <button class="btn btn-light" id="botonDrop"><i class="bi bi-caret-down-fill"></i> Expansiones</button>
+            </div>
+
+            <!-- seccion expansiones -->
+            <div class="col-12 mt-1 bg-body-secondary rounded-1" id="slidefilters" style="display: none; height: 200px;">
+
+                </div>
+
+            <!-- seccion btn deck builder -->
+            <div class="col-12 my-4 d-flex justify-content-center">
+                <button class="btn btn-lg btn-outline-light" id="botonDeck">Build Deck</button>
+            </div>
+        </div>
+
+        <!-- deck -->
+        <div class="row mt-4 justify-content-center">
 
             <!-- titulo -->
-            <p class="text-white h2">Series</p>
+            <div class="col-12">
+                <h2 class="text-white fw-bold text-center fs-1">DECK</h2>
+            </div>
+
+            <!-- filtros deck -->
+            <div class="col-6 mt-2 d-flex justify-content-center">
+
+                <ul class="list-group list-group-horizontal" id="deckFilters">
+                    <li class="list-group-item list-group-item-action text-center active">Todas</li>
+                    <li class="list-group-item list-group-item-action text-center">Pokemons</li>
+                    <li class="list-group-item list-group-item-action text-center">Entrenador</li>
+                    <li class="list-group-item list-group-item-action text-center">Energías</li>
+                </ul>
+
+            </div>
 
 
         </div>
 
-        <!-- Listado de series -->
-        <div class="row" id="list-series">
-
-            <!-- series -->
-            
-        </div>
+    </main>
 
 
-    </Main>
-
+    
 
 
     <!-- Importando codigo js de bootstrap -->
@@ -74,6 +103,6 @@
     <!-- Importando JS para la API de Pokemon -->
     <script src="https://cdn.jsdelivr.net/npm/@tcgdex/sdk@2/dist/tcgdex.browser.js"></script>
     <!-- Importando codigo js propio -->
-    <script src="../scripts/functionSeries.js" defer></script>
+    <script src="../scripts/deckBuilder.js" defer></script>
 </body>
 </html>
