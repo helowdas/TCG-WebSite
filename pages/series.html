@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Importando codigo de bootstrap -->
     <link rel="stylesheet" href="../styles/bootstrap_5.3_css/bootstrap.min.css">
+    <!-- Importando codigo CSS del footer -->
+    <link href="/styles/stylesFooter.css" rel="stylesheet"/>
     <!-- Importando codigo CSS propio -->
     <link rel="stylesheet" href="../styles/stylesSeries.css">
+
+    <!-- Importando iconos de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <title>Series de pokemon(TV)</title>
 </head>
@@ -18,17 +24,18 @@
 
     <nav class="navbar navbar-expand-lg">
         <div class="container logo_img">
-            <a class="navbar-brand" href="#"><img src="/assets/TCG_Logo.png"></a>
+            <a class="navbar-brand" href="#"><img src="/sources/TCG_Logo.png"></a>
             <button class="navbar-toggler white-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
     
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav nav-buttons">
-                <a class="nav-link" href="home.html">Home</a>
+                <a class="nav-link" href="../index.html">Home</a>
                 <a class="nav-link" href="ExpansionSv.html">Expansiones</a>
                 <a class="nav-link" href="how2play.html">Como Jugar</a>
                 <a class="nav-link" href="series.html">Series</a>
+                <a class="nav-link" href="#">Build Deck</a>
             </div>
             </div>
         </div>
@@ -63,7 +70,40 @@
 
     </Main>
 
+    <footer>
+        <div class="footer-container">
+            
+            <!-- Sección izquierda: íconos -->
+        <!-- Sección izquierda: íconos -->
+        <div class="footer-left">
+        <i class="fab fa-facebook-f social-icon"></i>
+        <i class="fab fa-youtube social-icon"></i>
+        <i class="fab fa-twitter social-icon"></i>
+        <i class="fab fa-instagram social-icon"></i>
+        </div>
+        
+            <!-- Sección central: carrusel -->
+            <div class="footer-center">
+            <img id="ods-image" src="imagen1.jpg" alt="img ODS">
+            </div>
+        
+            <!-- Sección derecha: boletín -->
+            <div class="footer-right">
+            <form>
+                <button type="submit">Suscribete</button>
+            </form>
+            </div>
+        
+        </div>
+        
+        <!-- Sección inferior: copyright -->
+        <div class="footer-bottom">
+            <p>Text Copyright</p>
+        </div>
+        </footer>
 
+    
+    <script src="/scripts/scriptFooter.js"></script>
 
     <!-- Importando codigo js de bootstrap -->
     <script src="../scripts/bootstrap_5.3_js/bootstrap.bundle.min.js "></script>
@@ -73,5 +113,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tcgdex/sdk@2/dist/tcgdex.browser.js"></script>
     <!-- Importando codigo js propio -->
     <script src="../scripts/functionSeries.js" defer></script>
+    <!-- Importando codigo js seccion expansion -->
+    <script src="../scripts/functionExpansionSv.js" defer></script>
 </body>
 </html>

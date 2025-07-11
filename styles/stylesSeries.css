@@ -30,6 +30,7 @@ nav{
     border-radius: 0.5rem;
 }
 
+/* variables seccion series */
 
 :root
 {
@@ -62,3 +63,15 @@ body
 {
     color: var(--color-secondary);
 }
+
+.serie-hover
+{
+    transition: all;
+    transition-duration: 0.3s;  
+}
+
+.serie-hover:hover
+{
+    box-shadow: 0 0px 30px var(--color-secondary);
+}
+
