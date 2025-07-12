@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+header.hero {
+  background: url('img/header-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header.hero h2 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+header.hero h1 {
+  font-size: 1.8rem;
+  margin: 0.5em 0 0;
+}
+
+section.about {
+  padding: 30px 20px;
+  background-color: #1e1e1e;
+  font-size: 0.9rem;
+}
+
+.about .lead {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+section.team {
+  padding: 40px 20px;
+  background-color: #121212;
+  text-align: center;
+}
+
+.team h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.member {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.member img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+  color: #ffb347;
+}
+
+.member p {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
