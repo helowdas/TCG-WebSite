@@ -4,9 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Proyecto</title>
+  <link rel="stylesheet" href="../styles/bootstrap_5.3_css/bootstrap.css">
   <link rel="stylesheet" href="../styles/stylesAboutUs.css">
+  <link rel="stylesheet" href="../styles/stylesFooter.css">
+  <link rel="stylesheet" href="../styles/style_navBar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container logo_img">
+      <a class="navbar-brand" href="#"><img src="../sources/TCG_Logo.png" /></a>
+      <button
+        class="navbar-toggler white-toggle"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavAltMarkup"
+      >
+        <div class="navbar-nav nav-buttons">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="ExpansionSv.html">Expansiones</a>
+          <a class="nav-link" href="how2play.html">Como Jugar</a>
+          <a class="nav-link" href="series.html">Series</a>
+          <a class="nav-link" href="deckBuilder.html">Build Deck</a>
+          <a class="nav-link" href="juegos.html">Juegos</a>
+          <a class="nav-link" href="AboutUs.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
 <section class="about">
   <p class="lead">
@@ -40,5 +76,39 @@
     </div>
   </section>
 
+
+  <footer>
+    <div class="footer-container">
+    
+    <!-- Sección izquierda: íconos -->
+<!-- Sección izquierda: íconos -->
+<div class="footer-left">
+    <i class="fab fa-facebook-f social-icon"></i>
+    <i class="fab fa-youtube social-icon"></i>
+    <i class="fab fa-twitter social-icon"></i>
+    <i class="fab fa-instagram social-icon"></i>
+</div>
+
+    <!-- Sección central: carrusel -->
+    <div class="footer-center">
+        <img id="ods-image" src="../sources/ODS/imagen1.jpg" alt="img ODS">
+    </div>
+
+    <!-- Sección derecha: boletín -->
+    <div class="footer-right">
+    <a href="formNewsLetter.html">
+        <button type="button">Suscribete</button>
+    </a>
+    </div>
+
+    </div>
+
+    <!-- Sección inferior: copyright -->
+    <div class="footer-bottom">
+    <p>Text Copyright</p>
+    </div>
+</footer>
+
+<script src="../scripts/bootstrap_5.3_js/bootstrap.bundle.js"></script>
 </body>
 </html>
